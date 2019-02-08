@@ -2,10 +2,8 @@
  This note is my note of Golang.
 
 # Go语言入门
-===
 
 ## Go的安装
----
 安装之前需要了解几个必要的文件目录：
 
 - **GOROOT** 目录，该目录为解压压缩包所存放的目录。Mac我使用[home brew](http://brew.sh/)安装方便快捷安装Go，如果你想要在你的 Mac 系统上安装 Go，则必须使用 `Intel 64` 位处理器，Go 不支持 `PowerPC` 处理器。默认在/usr/local/Cellar/go/版本/libexec，**Homebrew**有编译过程，安装需要时间。
@@ -37,21 +35,26 @@ source ~/.bash_profile
 
 ```
 vim ~/.profile
-# 加入
+# .profile文件中加入
 export GOPATH=$HOME/go
 export PATH=$HOME/bin:$GOPATH/bin:$PATH
 # 保存
 ```
 ```
 vim ~/.bash_profile
-# 加入
+# .bash_profile文件中加入
 source ~/.profile
 保存
 ```
 ```
 vim ~/.zshrc
-# 加入
+# .zshrc文件中加入
 source ~/.profile
 # 保存
 ```
 这样两个终端的环境变量就都配置完成了。
+
+使其立即生效
+```
+source /etc/profile
+```
